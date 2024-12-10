@@ -1,0 +1,64 @@
+1. Si deseo modificar el mensaje del método pitar al crear un objeto moto sin alterar la clase
+Auto, ¿qué debo agregarle al código? (Por ejemplo, al llamar el método pitar imprima: Las
+motos no pitan).
+
+tengo que sobreescribir el metodo pitar en la clase moto, algo asi como
+@Override
+    public void pitar(){
+        System.out.println("Las motos no pitan");
+    
+
+2. Suponga que se agrega una nueva clase al código, class Motoneta, y esta hereda de la clase
+Moto, ¿evidencia algún problema? ¿Por qué?
+
+No veo inmediatamente ningun problema, lo unico que creeria que se debe tener en cuenta es sobreescribir 
+el metodo pitar, ya que dice "las motos no pitan" lo  que deberia sobreescribirse a "las motonetas no pitan"
+
+3. Suponga que se definió el método:
+public void arrancar() {
+System.out.println("Arrancando");
+}
+en la clase Moto, ¿es posible sobrescribir el método? ¿Por qué?
+
+Hay que agregar en la linea superior @override para poder sobreescribir el metodo, pero funcionaria sin problema
+
+4. En la línea 13 de la clase moto, ¿Por qué puedo utilizar el método pitar?
+
+porque la clase moto se hereda de la clase auto que posee este metodo
+
+
+5. Haciendo una pequeña modificación a la clase Auto y utilizando la variable num_autos, sin
+modificar su modificador de acceso, ¿cómo puedo obtener el número de autos creados
+desde la clase ObjTaller5H?
+
+creando un metodo getNumAutos que sea publico, se puede acceder a este dato
+
+
+6. En la línea 7 de la clase ObjTaller5H, ¿Por qué no puedo utilizar el método adelantar, si
+este fue heredado?
+
+Ya que este metodo posee privacidad de paquete, asi que solo es accesible dentro del paquete 1, siendo que la moto
+pertenece al paquete 2, este no es accesible para la clase moto aunque esta sea subclase de auto
+
+7. En la línea 8, ¿por qué es posible utilizar el método arrancar si la clase Bus no lo define?
+
+ya que esta clase bus parte de la clase auto, este metodo si es heredado ya que tiene privacidad publica
+
+
+8. En la línea 9 de la clase ObjTaller5H, ¿por qué no puedo utilizar el método pitar, si este fue
+heredado? 
+
+En la linea 9 el metodo pitar SI se puede utilizar, e imprime Piiiiii ya que lo llama la clase bus
+que la hereda de la clase auto
+
+9. En la línea 10 de la clase ObjTaller5H, ¿qué imprime el método getVelocidad()? ¿Por qué?
+
+no imprime nada ya que este metodo retorna un valor, no genera ninguna impression, habria que agregar
+un system.out.println para que este imprimiera el valor de velocidad
+
+
+10. Si quisiera obtener el valor de la placa de las clases Moto y Bus, además de su modelo y
+capacidad respectivamente, ¿Que debo agregar al código?
+
+habria que agregar metodos get para poder acceder a estos datos privados, como getPlaca, getModelo
+etc... 
